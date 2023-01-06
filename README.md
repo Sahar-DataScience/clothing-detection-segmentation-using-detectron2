@@ -43,13 +43,14 @@ python -m pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wh
 ### - Training details
       -  The pretrained model  modelCOCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x   (box AP 41 Mask AP 37)
       -  2 backbone layers are freezed to avoid overfitting
+      -  batchsize = 2
       -  Total iterations 271k
       -  LR 0.001 reduced at iteration 163k and 230k
       -  Checkpoints saved each 13k iterations 
       -  Training on 54k images 
 to understand more about detetcron2 hyperparameters configuration check [this](https://detectron2.readthedocs.io/en/latest/modules/config.html?highlight=config)
 
-<img src='https://raw.githubusercontent.com/Sahar-DataScience/clothing-detection-segmentation-using-detectron2/main/images/training%20details.jpg' width='50%'/>
+<img src='https://raw.githubusercontent.com/Sahar-DataScience/clothing-detection-segmentation-using-detectron2/main/images/training%20details.jpg' width='70%'/>
 
 ## 3. Evaluation
 
