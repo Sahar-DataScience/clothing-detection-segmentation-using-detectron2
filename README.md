@@ -40,6 +40,15 @@ pip install pycocotools
 python -m pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.9/index.html
 
 ```
+### - Training details
+      -  The pretrained model  modelCOCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x   (box AP 41 Mask AP 37)
+      -  2 backbone layers are freezed to avoid overfitting
+      -  Total iterations 271k
+      -  LR 0.001 reduced at iteration 163k and 230k
+      -  Checkpoints saved each 13k iterations 
+      -  Training on 54k images 
+      
+to understand more about detetcron2 hyperparameters configuration check [this](https://detectron2.readthedocs.io/en/latest/modules/config.html?highlight=config)
 ## 3. Evaluation
 ### - Test set 
 ```
@@ -109,8 +118,8 @@ index created!
 | shorts              | 79.815 | trousers           | 79.133 |                      |        |
 OrderedDict([('bbox', {'AP': 84.01428995724827, 'AP50': 97.78271739220436, 'AP75': 95.31086500403688, 'APs': 90.0, 'APm': 77.56184022471318, 'APl': 84.08033907097128, 'AP-short_sleeved_shirt': 86.09565841415512, 'AP-long_sleeved_shirt': 84.97832571093082, 'AP-long_sleeved_outwear': 87.2606139252723, 'AP-shorts': 80.7328714070072, 'AP-trousers': 81.00398032887594}), ('segm', {'AP': 79.20463838317468, 'AP50': 97.58865617295218, 'AP75': 94.3327826617389, 'APs': 76.69141914191418, 'APm': 62.89989410886051, 'APl': 79.35623090795374, 'AP-short_sleeved_shirt': 86.40581702012908, 'AP-long_sleeved_shirt': 81.5966939957104, 'AP-long_sleeved_outwear': 69.07223653143465, 'AP-shorts': 79.81532974646667, 'AP-trousers': 79.13311462213261})])
 ```
-### - Average Precision per class before and after 5 folds cross validation
+### - Average Precision per class 
 
 0 < AP < 1
 
-<img src='https://raw.githubusercontent.com/Sahar-DataScience/clothing-detection-segmentation-using-detectron2/main/images/F1_Score_per_category.PNG'/>
+<img src='https://raw.githubusercontent.com/Sahar-DataScience/clothing-detection-segmentation-using-detectron2/main/images/AP_per_class.PNG' width='50%'/>
