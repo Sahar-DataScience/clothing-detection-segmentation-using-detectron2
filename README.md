@@ -10,3 +10,6 @@ the model was trained on 50k images extracted from [DeepFashion2](https://github
 ###  - Dataset Preprocessing 
 the extracted 50k images considered as good data where each item is labeled with low occlusion, medium scale and acceptable zoom in 
 the number of classes where reduced from 13 to only 5 categories : short sleeved shirt, long sleeved shirt , outwear , shorts and trousers in order to make new balanced data set to ameliorate training results
+
+<img src='https://raw.githubusercontent.com/Sahar-DataScience/clothing-detection-segmentation-using-detectron2/main/images/five_classes.png' width='50%'/>
+
